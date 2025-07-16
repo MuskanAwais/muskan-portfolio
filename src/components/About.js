@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import muskanImg from "../assets/logo1921.jfif";
 import {
   MapPinIcon,
   AtSymbolIcon,
@@ -10,9 +11,32 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 const features = [
   {
-    name: "linkedin:",
-    description: "www.linkedin.com/in/muskan-awais",
+    name: "LinkedIn:",
+    description: (
+      <a
+        href="https://www.linkedin.com/in/muskan-awais"
+        className="text-blue-600 underline hover:text-blue-800"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        www.linkedin.com/in/muskan-awais
+      </a>
+    ),
     icon: CalendarIcon,
+  },
+  {
+    name: "GitHub:",
+    description: (
+      <a
+        href="https://github.com/MuskanAwais"
+        className="text-blue-600 underline hover:text-blue-800"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        github.com/MuskanAwais
+      </a>
+    ),
+    icon: BriefcaseIcon,
   },
   {
     name: "Email:",
@@ -44,8 +68,9 @@ export default function About() {
                 About Me
               </p>
               <p className="mt-6 text-lg leading-8" data-aos="fade-right">
-                Hi! I'm Muskan Awais, a Full Stack Developer from Lahore. I build web apps using React, Node.js, and MongoDB. I've worked on real-world projects, organized hackathons, and love solving problems through code. I'm passionate about tech, teamwork, and helping others grow.
+                I’m Muskan Awais, a passionate Full Stack Developer based in Lahore. With hands-on experience in React, Node.js, MongoDB, and Tailwind CSS, I love building sleek and responsive web applications. From organizing tech events to leading coding projects, I thrive on collaboration and creative problem-solving. I believe in writing clean, scalable code and learning continuously to keep growing in the ever-evolving tech world.When I’m not coding, you’ll find me mentoring juniors, exploring new tech trends, or designing intuitive user experiences.
               </p>
+
             </div>
           </div>
         </div>
@@ -54,10 +79,11 @@ export default function About() {
           data-aos="fade-left"
         >
           <img
-            className="w-[38rem] ring-2 ring-base-300 max-w-none rounded-xl shadow-xl sm:w-[57rem]"
-            src="https://fastly.picsum.photos/id/473/5000/3333.jpg?hmac=OrrE0aUqLbLCJ9PAlSn0dIRHjOnuuuev9IjuO3PGZf8 "
-            alt="Person"
+            src={muskanImg}
+            alt="Muskan Awais"
+            className="w-40 sm:w-56 md:w-64 lg:w-80 xl:w-96 mx-auto rounded-xl shadow-xl ring-2 ring-base-300"
           />
+
         </div>
       </div>
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
@@ -69,19 +95,72 @@ export default function About() {
                 data-aos="zoom-in"
               >
                 <BriefcaseIcon className="h-5 w-5 mx-auto" aria-hidden="true" />
-                <h2 className=" text-2xl text-center font-bold tracking-tight">
-                  Experience
-                </h2>
-                <p className="mt-3 list-item list-inside">
-                  Computer Science graduate with expertise in algorithms.
-                </p>
-                <p className="mt-3 list-item list-inside">
-                  Diverse experience in web and mobile development.
-                </p>
-                <p className="mt-3 list-item list-inside">
-                  Leads coding workshops and mentors aspiring developers.
-                </p>
+                <h2 className="text-2xl text-center font-bold tracking-tight">Experience</h2>
+
+                <div className="mt-4">
+                  <p className="font-semibold">Python Developer Intern – Nexogics</p>
+                  <p className="text-sm text-gray-600">Worked on automating internal tools and scripting with Python, gaining hands-on experience in backend logic and API integration.</p>
+                </div>
+
+                <div className="mt-4">
+                  <p className="font-semibold">GenAI Engineer – DevSphere</p>
+                  <p className="text-sm text-gray-600">Contributed to AI-driven projects using large language models, built GenAI tools, and helped in community engagement around AI innovation.</p>
+                </div>
+
+                <div className="mt-4">
+                  <p className="font-semibold">Web Developer – Gutech International</p>
+                  <p className="text-sm text-gray-600">Designed and developed a responsive website for Gutech International, improving user experience and performance across devices.</p>
+                </div>
               </div>
+              <div
+                className="ring-2 ring-base-300 bg-base-200 rounded-2xl mt-10 p-5 shadow-xl"
+                data-aos="zoom-in"
+              >
+                <AcademicCapIcon className="h-5 w-5 mx-auto" aria-hidden="true" />
+                <h2 className="text-2xl text-center font-bold tracking-tight">Volunteering</h2>
+
+                <div className="mt-4">
+                  <p className="font-semibold">Zimal UET – Research & Report Lead</p>
+                  <p className="text-sm text-gray-600">Led a creative team to publish university updates, managed captions, poster content, and ensured consistency in communication.</p>
+                </div>
+
+                <div className="mt-4">
+                  <p className="font-semibold">Hackathon Mentor – UET Tech Week</p>
+                  <p className="text-sm text-gray-600">Mentored beginner teams in problem-solving, project planning, and presentation strategy during university hackathons.</p>
+                </div>
+
+                <div className="mt-4">
+                  <p className="font-semibold">Event Organizer – Skills Gala 2024</p>
+                  <p className="text-sm text-gray-600">Played a key role in planning, logistics, and promotions for Skills Gala, a tech networking event at PC Lahore.</p>
+                </div>
+              </div>
+              <div
+                className="ring-2 ring-base-300 bg-base-200 rounded-2xl mt-10 p-5 shadow-xl"
+                data-aos="zoom-in"
+              >
+                <AcademicCapIcon className="h-5 w-5 mx-auto" aria-hidden="true" />
+                <h2 className="text-2xl text-center font-bold tracking-tight">Certifications</h2>
+
+                <ul className="mt-4 space-y-3 text-gray-700 text-sm">
+                  <li>
+                    <span className="font-semibold">Advanced SQL Certification</span> — Mastered complex queries and joins.
+                  </li>
+                  <li>
+                    <span className="font-semibold">PUCon Speed Programming</span> — Competed in timed coding challenges.
+                  </li>
+                  <li>
+                    <span className="font-semibold">MERN Stack Training</span> — Built full-stack web apps using React & Node.
+                  </li>
+                  <li>
+                    <span className="font-semibold">JavaScript Essentials</span> — Strengthened core language concepts.
+                  </li>
+                  <li>
+                    <span className="font-semibold">Project Management</span> — Learned Agile, sprint planning & team workflows.
+                  </li>
+                </ul>
+              </div>
+
+
               <div
                 className="ring-2 ring-base-300 bg-base-200 rounded-2xl mt-10 p-5 shadow-xl"
                 data-aos="zoom-in"
@@ -94,7 +173,7 @@ export default function About() {
                   Education
                 </h2>
                 <p className="mt-3 list-item list-inside">
-                  BS Computer Science – UET Lahore (CGPA 3.6/4.0)
+                  BS Computer Science – UET Lahore (CGPA 3./4.0)
                 </p>
                 <p className="mt-3 list-item list-inside">
                   Queen Mary College , Lahore (Intermediate)
